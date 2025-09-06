@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #fff 0%, #fef4f1 100%);
+}
+
+        /* Header y Navigation 
+        header {
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .logo {
+            /**font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            width: 150px;
+            height: 150px;
+            float: left;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-menu li a:hover {
+            background: #fff;
+            color: #FF6B35;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }*/
+
+        
+header nav {
+    /* Convierte el contenedor en un contenedor flexible */
+    display: flex;
+    /* Alinea los elementos verticalmente al centro */
+    align-items: center;
+    /* Separa el logo del menú de navegación, empujándolos a los extremos */
+    justify-content: space-between;
+    background-color: #FB8500;
+    color: #fff;
+}
+
+.logo img {
+    /* Define el tamaño del logo */
+    width: 100px;
+    height: 100px;
+    /* Añade un espacio a la derecha del logo */
+    margin-right: 20px;
+}
+
+.nav-menu {
+    /* Elimina los puntos de la lista */
+    list-style-type: none;
+    /* Quita el padding por defecto de la lista */
+    padding: 0;
+    /* Convierte la lista en un contenedor flexible para alinear los ítems */
+    display: flex;
+}
+
+.nav-menu li a {
+    /* Remueve el subrayado de los enlaces */
+    text-decoration: none;
+    /* Añade espacio entre los ítems del menú */
+    padding: 10px 15px;
+    /* Esto es opcional, pero ayuda a mejorar el diseño */
+    color: #fff;
+}
+    
+/*Main Content */
+main {
+    margin-top: 80px;
+    min-height: calc(100vh - 160px);
+}
+
+.page {
+    display: none;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FF6B35;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+        
+
+/* Grid de proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+        .project-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.15);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.25);
+            border-color: #FF6B35;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: #FF6B35;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .project-text {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        
+
+        .project-legend {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .project-button {
+            background: #E13e00;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .project-button:hover {
+            background: #b32d00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(225, 62, 0, 0.4);
+        }
+
+        /* Páginas específicas */
+        .about-content, .marketing-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.15);
+            margin: 2rem 0;
+        }
+
+        .about-section {
+            margin-bottom: 2rem;
+        }
+
+        .about-section h3 {
+            color: #FF6B35;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-section p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Formulario de contacto */
+        .contact-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.15);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #FF6B35;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #FFD1C1;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #FF6B35;
+            box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
+        }
+
+        .submit-button {
+            background: #E13e00;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: #b32d00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(225, 62, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            main {
+                margin-top: 120px;
+            }
+        }
+
+        /* Efectos especiales para las imágenes */
+        .web-design .project-image {
+            background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+        }
+
+        .animations-3d .project-image {
+            background: linear-gradient(135deg, #FF6B9D 0%, #C44569 100%);
+        }
+
+
+        .videos .project-image {
+            background: linear-gradient(135deg, #F38BA8 0%, #FB8500 100%);
+        }
+
+        /* Animaciones adicionales */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .project-card:hover .project-image {
+            animation: pulse 1s infinite;
+        }
